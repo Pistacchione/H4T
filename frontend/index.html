@@ -3,24 +3,47 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>#H4T</title>
 
   <!-- CSS LIBS -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700' rel='stylesheet' type='text/css'>
 
   <!-- CUSTOM CSS-->
   <link rel="stylesheet" href="css/h4t.css" />
 </head>
 
-<body>
+<body ng-controller="appController">
 
+  <ng-include src="'views/include/navbar.html'"></ng-include>
 
+  <ng-view class="top_padding"></ng-view>
 
+  <ng-include src="'views/include/footer.html'"></ng-include>
 </body>
 
 <!-- JS LIBS -->
 <script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
+<script src="bower_components/angular-ui-map/ui-map.min.js"></script>
+<script src="bower_components/angular-ui-event/dist/event.min.js"></script>
+
+
+<script src="app.js"></script>
+
+<!-- CONTROLLERS -->
+<script src="js/controllers/homeController.js"></script>
+<script src="js/controllers/userController.js"></script>
+<script src="js/controllers/itineraryController.js"></script>
+
+<!-- SERVICES -->
+<script src="js/services/contentService.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=onGoogleReady" type="text/javascript"></script>
 </html>

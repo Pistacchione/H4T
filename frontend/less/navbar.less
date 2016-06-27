@@ -1,0 +1,121 @@
+@H_ITEM_BORDER_HEIGHT: 10px;
+
+.navbar {
+  margin: 0;
+
+  &.navbar-default {
+    font-size: 19px;
+
+    background-color: @H_TRAS_BLACK;
+
+    border-width: 0;
+    border-radius: 0;
+
+    .navbar-toggle {
+      border-color: @H_TRAS_BLACK;
+
+      &:hover, &:focus, .icon-bar {
+        background-color: @H_TRAS_BLACK;
+
+        .icon-bar {
+          background-color: @H_TRAS_BLACK;
+        }
+      }
+    }
+
+    .navbar-brand {
+      height: @H_NAVBAR_HEIGHT;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .navbar-nav {
+      height: @H_NAVBAR_HEIGHT;
+
+      > li , > .active {
+        height: @H_NAVBAR_HEIGHT;
+
+        > a, > a:hover, > a:focus {
+          height: @H_NAVBAR_HEIGHT;
+
+          color: @H_WHITE;
+          text-transform: uppercase;
+          line-height: @H_NAVBAR_HEIGHT - @H_ITEM_BORDER_HEIGHT;
+
+          padding: 4px 0 0 0;
+          margin-right: 35px;
+
+          border-bottom: @H_ITEM_BORDER_HEIGHT solid transparent;
+        }
+
+        > a:hover, > a:focus {
+          border-bottom: @H_ITEM_BORDER_HEIGHT solid @H_PRIMARY;
+        }
+      }
+
+      > li {
+        &.navbar-icon-button {
+
+          a {
+
+            width: 50px;
+            margin-right: 0;
+            border-bottom: none;
+
+            background-size: 300%;
+            background-position-x: -12px;
+
+            &:hover {
+              background-position-x: 63px;
+              cursor: pointer;
+            }
+          }
+
+          &.wizard {
+            a {
+              background-image: url('../img/wizard_icon.png');
+            }
+          }
+
+          &.logout {
+            a {
+              background-image: url('../img/logout_icon.png');
+            }
+          }
+
+
+          &.profile-pic {
+            a {
+              line-height: 70px;
+              margin: 0 5px;
+
+              img {
+                width: 60px;
+                height: 60px;
+
+                margin-left: 5px;
+
+                border-radius: 100%;
+                border: 1px solid @H_BLUE;
+
+                background-color: @H_WHITE;
+
+                &:hover {
+                  border: 1px solid @H_PRIMARY;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > .active {
+      > a, > a:hover, > a:focus {
+        border-bottom: @H_ITEM_BORDER_HEIGHT solid @H_PRIMARY;
+      }
+    }
+  }
+}

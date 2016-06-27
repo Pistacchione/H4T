@@ -1,0 +1,172 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <!-- ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol -->
+
+  <div class="carousel-inner" role="listbox">
+    <div ng-repeat="slide in homeSlides"
+         ng-class="{'active': $index == 0}"
+         class="item"
+         style="background-image: url('../img/home_slide/{{slide.image}}.jpg')">
+
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>{{slide.title}}</h1>
+          <p>{{slide.short}}</p>
+          <button class="btn btn-orange">Scopri di più</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a -->
+  <div class="jumbotron orange-bg secondary-nav">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="form-wrap">
+          <input type="text" class="form-control" placeholder="Cerca luogo o punto d'interesse" />
+          <button class="btn btn-primary">Cerca</button>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container margin-top">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>I migliori itinerari:</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="text-container">
+        <h3>Roma ed i suoi figli, il Lazio che non conosci</h3>
+        <p>Scopri le incredibili bellezze del Lazio condividendo itinerari e raccontando la tua esperienza.</p>
+
+        <button class="btn btn-orange" ng-click="gotoItinerary()">Per saperne di più</button>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="img-container" style="background-image: url('../img/banditaccia.jpg');">
+        <div class="overlay">
+          <div class="ribbon">TOP</div>
+          <h3>Passaggio a Nord-Ovest</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="img-container" style="background-image: url('../img/anzio.jpg');">
+        <div class="overlay">
+          <h3>Sulle orme di Nerone</h3>
+          <div class="footer">Roma, Anzio e Subiaco</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container margin-top">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Lasciati consigliare dagli utenti:</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="img-container" style="background-image: url('../img/giulia.jpg');">
+        <div class="overlay" ng-click="gotoItinerary()">
+          <h3>Passaggio a Nord-Ovest</h3>
+          <div class="ribbon">TOP</div>
+          <div class="footer">Cerveteri e Valle Giulia</div>
+          <div class="user">
+            <span>Gianmarco</span>
+            <img src="../img/users/3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="img-container" style="background-image: url('../img/home_slide/3.jpg');">
+        <div class="overlay" ng-click="gotoItinerary()">
+          <h3>Viaggio tra i monti Simbruini</h3>
+          <div class="footer">Subiaco</div>
+          <div class="user">
+            <span>Giovanni</span>
+            <img src="../img/users/1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container padding-top">
+  <div class="row">
+    <div class="col-md-12" ng-click="gotoItinerary()">
+      <div class="img-container" style="background-image: url('../img/home_slide/3.jpg');">
+        <div class="overlay">
+          <h3>Sulle orme di Nerone</h3>
+          <div class="footer">Subiaco</div>
+          <div class="user">
+            <span>Giovanni</span>
+            <img src="../img/users/2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container padding-top">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="img-container" style="background-image: url('../img/home_slide/3.jpg');">
+        <div class="overlay" ng-click="gotoItinerary()">
+          <h3>La Roma Medioevale</h3>
+          <div class="ribbon">TOP</div>
+          <div class="user">
+            <span>Giovanni</span>
+            <img src="../img/users/3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="img-container" style="background-image: url('../img/home_slide/1.jpg');">
+        <div class="overlay" ng-click="gotoItinerary()">
+          <h3>I Castelli Romani</h3>
+          <div class="user">
+            <span>Giovanni</span>
+            <img src="../img/users/1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
